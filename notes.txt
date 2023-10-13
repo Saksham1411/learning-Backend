@@ -1,0 +1,5 @@
+nodemon is like live server run krne ke < npm run dev > yeh cmd hai
+npm run dev isliye kyuki package me script me dev pe nodemon app.js dala hua hai
+npm start me bhi "node app.js" dala hua toh koi v app npm start se run hojegii
+
+

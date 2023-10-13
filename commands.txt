@@ -1,0 +1,10 @@
+run krne ke liye node <fileName>
+
+package.json ke liye :--> npm init
+ferr jo bhi package krene hai :--> npm i <PackageName>
+
+dev dependency ke liye :--> npm i <name> -D
+
+koi v package uninstall krne ke liye :--> npm uninstall <PackageName>
+ya ferr
+package me jake dependencies me se usko uda ke node module ka folder delte krdo or frr node module ferse install krlo :--> npm install
