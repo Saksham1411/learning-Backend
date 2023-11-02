@@ -15,3 +15,5 @@ mainly static file woh hoti hai file jo server ko jisme kuch ni krna hota uske l
 express.urlencoded()
 1. built-in middleware function
 2. yeh url-encoded data ko json type me convert krdeta hai
+
+app.use have express.json() which help us to give req.body data in json format
