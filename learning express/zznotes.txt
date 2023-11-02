@@ -1,0 +1,17 @@
+installing express command
+npm install express --save
+
+
+in callback function the arguments pass is first one is request and other is response 
+request,response
+req,res
+
+express.static ==> This is a built-in middleware function in Express. It serves static files and is based on serve-static.
+yeh app.use me use hota hai isme jo bhi static files hai jo html ke andr attach hoti unko server side pe dalne ke liye use hota hai
+syntax --> app.use(express.static('<address>'))
+mainly static file woh hoti hai file jo server ko jisme kuch ni krna hota uske liye static hoti hai
+
+
+express.urlencoded()
+1. built-in middleware function
+2. yeh url-encoded data ko json type me convert krdeta hai

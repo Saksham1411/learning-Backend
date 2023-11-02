@@ -1,0 +1,24 @@
+const express = require('express')
+const path = require('path')
+
+const app = express()
+
+// setup static and middleware
+app.use(express.static('./public'))
+// index html bhi staic file hi thi usko bhi public me daldia 
+// mtlb jo simple sites hoti usko ese hi app.use se hi server pe dal skte h
+
+
+// app.get('/', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, './navbar-app/index.html'))
+//   adding to static assets
+//   SSR
+// })
+
+app.all('*', (req, res) => {
+  res.status(404).send('resource not found')
+})
+
+app.listen(5000, () => {
+  console.log('server is listening on port 5000....')
+})
