@@ -1,0 +1,6 @@
+mongoose is used to connect the mongoDB with the code 
+how to connect
+we have to setup a enviroment variable which have url of database (.env file)
+ek connect.js ki file bnake usme mongoose import kia frr ek connectdb ka function bnake return krdia
+frr app.js me connect ko import krke async function bnake usme
+try catch lgake connectdb function me .env se url leke pass krdia frr jaise hi connect ho toh server.listen ko run krado
