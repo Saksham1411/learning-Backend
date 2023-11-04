@@ -4,3 +4,20 @@ we have to setup a enviroment variable which have url of database (.env file)
 ek connect.js ki file bnake usme mongoose import kia frr ek connectdb ka function bnake return krdia
 frr app.js me connect ko import krke async function bnake usme
 try catch lgake connectdb function me .env se url leke pass krdia frr jaise hi connect ho toh server.listen ko run krado
+
+
+schema
+Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection
+
+models and schema
+A Mongoose model is a wrapper on the Mongoose schema. A Mongoose schema defines the structure of the document, default values, validators, etc., whereas a Mongoose model provides an interface to the database for creating, querying, updating, deleting records, etc.
+
+
+we can and validation direct to schema by making object
+
+
+
+mongoDB functions
+.create => add a model to the database
+.find => use to return the the data from database 
+        we have to pass filter<{}> yeh ese brac me as parameter to find a specific data agr empty brackets hai toh sara data return hojega
