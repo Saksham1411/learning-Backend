@@ -14,10 +14,27 @@ A Mongoose model is a wrapper on the Mongoose schema. A Mongoose schema defines 
 
 
 we can and validation direct to schema by making object
-
+  <<<required:[true,'must provide name'],
+  trim:true,
+  maxlength:[20,'name can not be more than 20 characters']>>> Like these
 
 
 mongoDB functions
 .create => add a model to the database
 .find => use to return the the data from database 
         we have to pass filter<{}> yeh ese brac me as parameter to find a specific data agr empty brackets hai toh sara data return hojega
+.findOne => koi bhi ek element dhundne ke liye
+.findOneAndDelete => dhund ke delete krna
+.findOneAndUpdate => dhund ke update krnaa
+
+put vs patch
+main use : 
+        both are use to update the data 
+diff :
+        in put whole data have to modify i.e. we have to pass all the parameter in object with same or new value BUT
+   BUT  in patch we can update a single property or value of object not need to modify entire data
+
+(req,res,next)=>{}
+next => Callback argument to the middleware function, called "next" by convention.
+res => HTTP response argument to the middleware function, called "res" by convention.
+req => HTTP request argument to the middleware function, called "req" by convention.
