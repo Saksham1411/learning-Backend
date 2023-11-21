@@ -9,6 +9,8 @@ try catch lgake connectdb function me .env se url leke pass krdia frr jaise hi c
 schema
 Everything in Mongoose starts with a Schema. Each schema maps to a MongoDB collection and defines the shape of the documents within that collection
 
+schema ek trh se jo data hum mongoDB pe bhejte hai uska format kya hoga jo json data hai uski kya keys hongi or frr un keys ko declare krna ki kya type hogi values ki or bhi bakki properties
+
 models and schema
 A Mongoose model is a wrapper on the Mongoose schema. A Mongoose schema defines the structure of the document, default values, validators, etc., whereas a Mongoose model provides an interface to the database for creating, querying, updating, deleting records, etc.
 
@@ -23,9 +25,13 @@ mongoDB functions
 .create => add a model to the database
 .find => use to return the the data from database 
         we have to pass filter<{}> yeh ese brac me as parameter to find a specific data agr empty brackets hai toh sara data return hojega
+        nhi toh object me daldo jo find krna haii example <Product.find({ name: 'vase table'});>
+
 .findOne => koi bhi ek element dhundne ke liye
 .findOneAndDelete => dhund ke delete krna
 .findOneAndUpdate => dhund ke update krnaa
+product.deleteMany() => remove all the data
+
 
 put vs patch
 main use : 
