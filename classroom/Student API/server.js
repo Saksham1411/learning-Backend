@@ -14,6 +14,10 @@ app.get('/students', (req, res) => {
 // add item
 app.post('/students', (req, res) => {
     const data = req.body;
+    if (!data.name || !data.rollno) {
+        res.send("invalid data");
+        return;
+    }
     students.push(data);
     res.send("data added");
 })
@@ -21,18 +25,20 @@ app.post('/students', (req, res) => {
 // getOne
 app.get('/students/:id', (req, res) => {
     const { id } = req.params;
-    const student = [];
-    // const singleStudent = students.find((item)=> item.rollno === Number(id));
-    const singleStudent = students.filter((student)=> +student.rollno === +id);
+    const singleStudent = students.find((student) => +student.rollno === Number(id));
+    if (!singleStudent) {
+        res.send("student not found");
+        return;
+    }
     res.send(singleStudent);
 })
 
 // update
-app.put('/students/:id' ,(req,res)=>{
+app.put('/students/:id', (req, res) => {
     const { id } = req.params;
     const { name } = req.body;
-    students.forEach((student)=>{
-        if(+student.rollno === +id){
+    students.forEach((student) => {
+        if (+student.rollno === +id) {
             student.name = name;
         }
     })
@@ -40,9 +46,9 @@ app.put('/students/:id' ,(req,res)=>{
 })
 
 // delete
-app.delete('/students/:id',(req,res)=>{
-    const{id} = req.params;
-    students = students.filter((student)=> +student.rollno !== +id);
+app.delete('/students/:id', (req, res) => {
+    const { id } = req.params;
+    students = students.filter((student) => +student.rollno !== +id);
     res.send('student delete');
 })
 
