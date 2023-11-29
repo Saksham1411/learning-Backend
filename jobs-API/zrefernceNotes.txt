@@ -1,0 +1,1 @@
+bycrpt jo password hashing ke liye use kia usko schema me daldia jo ki pre me chlra hai mtlb data base me jane se phele woh chij chlegi or password hash kregi

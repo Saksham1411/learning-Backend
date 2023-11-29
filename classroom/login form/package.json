@@ -1,0 +1,15 @@
+{
+  "name": "untitled",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Saksham",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "hbs": "^4.2.0"
+  }
+}
