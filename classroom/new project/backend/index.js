@@ -1,10 +1,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const Note = require('./model/Note');
+const cors = require('cors');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/notes', async (req, res) => {
     const notes = await Note.find();
