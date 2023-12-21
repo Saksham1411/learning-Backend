@@ -22,6 +22,16 @@ app.post('/notes', async (req, res) => {
     }
 })
 
+app.delete('/notes/:id', async (req, res) => {
+    const { id } = req.params;
+    try{
+        await Note.findOneAndDelete({ _id: id });
+        res.send("delete");
+    }catch(error){
+        res.status(400).send("could not delete note");
+    }
+})
+
 mongoose.connect('mongodb://127.0.0.1:27017/notes');
 
 app.listen(3000, () => {
